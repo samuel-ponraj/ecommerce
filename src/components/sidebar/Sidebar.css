@@ -1,0 +1,97 @@
+.sidebar {
+    margin: 10px 5px 10px 10px;
+    border-radius: 5px;
+    width: 250px; 
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    color: var(--primary);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.sidebar-content{
+    position: sticky;
+    top: 80px;
+}
+
+.sidebar h4{
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.category, .price-range{
+    margin-top: 20px;
+}
+
+.price-range p{
+    margin: 15px 0;
+}
+
+.category ul, .sort ul{
+    list-style: none;
+}
+
+.category ul li, .sort ul li{
+    margin: 5px;
+}
+
+.category input, .sort input{
+    cursor: pointer;
+}
+
+.category ul li label, .sort ul li label{
+    margin-left: 5px;
+    font-size: 14px;
+} 
+
+
+
+@media (max-width: 1024px) {
+
+    .sidebar-content{
+        position: static;
+        margin-top: 20px;
+    }
+
+    .slider{
+        margin-left: 10px;
+    }
+
+    .price-range p{
+        margin: 15px 0 0 0;
+    }
+   
+    .sidebar {
+        position: fixed;
+        top: 60px;
+        left: -250px;
+        width: 30%;
+        height: 100vh;
+        background-color: var(--secondary);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        opacity: 0;
+        transform: translateX(-100%);
+        visibility: hidden;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        z-index: 10;
+        font-weight: 450;
+    }
+    
+    .sidebar.active {
+        margin: 0;
+        border-radius: 0 5px 5px 0;
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px){
+    .sidebar{
+        width: 50%;
+    }
+}

@@ -1,0 +1,39 @@
+
+.content-wrapper {
+    display: flex;
+}
+
+.App{
+position: relative;
+}
+
+.scroll-to-top-btn{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 50%;
+    line-height: 1;
+    padding: 10px;
+    background-color: #74d7cf;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top-icon{
+    color: white;
+    font-weight: 400;
+    font-size: 30px !important;
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #11375ae2;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .scroll-to-top-btn{
+        bottom: 40px;
+        right: 40px;
+        padding: 10px;
+    }
+  }
