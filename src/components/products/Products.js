@@ -3,18 +3,16 @@ import './Products.css'
 import Rating from '@mui/material/Rating';
 import Skeleton from '@mui/material/Skeleton'; 
 import { toast, Toaster } from 'sonner';
+import 'aos/dist/aos.css'
 
 const Products = ({products, loading, error, setCartCount, clicked, setClicked}) => {
-
-
     
-
    
   if (loading) {
     return (
       <div className="product-list">
         {[...Array(20)].map((_, index) => (
-          <div key={index} className="product">
+          <div key={index} className="product" >
             <Skeleton variant="rectangular" width="100%" height={250} />
             <Skeleton variant="text" width="40%" />
             <Skeleton variant="text" width="40%" />
@@ -36,7 +34,7 @@ const Products = ({products, loading, error, setCartCount, clicked, setClicked})
     <Toaster position="top-center" richColors /> 
     <div className="product-list">
     {products.map((product) => (
-            <div key={product.id} className="product">
+            <div key={product.id} className="product" >
             <img src={product.image} alt={product.title} />
             <p>{product.category.toUpperCase()}</p>
                 <div className="rating">
