@@ -1,10 +1,12 @@
 
 .content-wrapper {
     display: flex;
+    min-height: 100vh;
 }
 
 .App{
 position: relative;
+
 }
 
 .scroll-to-top-btn{
