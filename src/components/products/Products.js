@@ -3,7 +3,6 @@ import './Products.css'
 import Rating from '@mui/material/Rating';
 import Skeleton from '@mui/material/Skeleton'; 
 import { toast, Toaster } from 'sonner';
-import 'aos/dist/aos.css'
 
 const Products = ({products, loading, error, setCartCount, clicked, setClicked}) => {
     
@@ -28,6 +27,8 @@ const Products = ({products, loading, error, setCartCount, clicked, setClicked})
   if (error) {
    console.log(error)
   }
+
+  
 
   return (
     <>

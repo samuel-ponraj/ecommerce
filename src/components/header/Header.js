@@ -3,6 +3,7 @@ import './Header.css'
 import logo from '../../assets/header/logo.png'
 import Hamburger from "hamburger-react";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 const Header = ({isMenuOpen, toggleMenu, cartCount, setSearchQuery, searchQuery, scrollToTop}) => {
 
@@ -25,6 +26,7 @@ const Header = ({isMenuOpen, toggleMenu, cartCount, setSearchQuery, searchQuery,
           rounded
           hideOutline={false}
           size={25}
+          direction="up" 
         />
       </div>
         <div className="header-logo">
@@ -35,6 +37,10 @@ const Header = ({isMenuOpen, toggleMenu, cartCount, setSearchQuery, searchQuery,
                   placeholder='Search for Products'
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}/>
+        </div>
+        <div className="account">
+          <AccountBoxIcon className="account-icon" sx={{fontSize:'28px'}}/>
+          <p>Account</p>
         </div>
         <div className="header-options">
           <div className="cart">

@@ -4,6 +4,7 @@ import Header from './components/header/Header'
 import Products from './components/products/Products';
 import Sidebar from './components/sidebar/Sidebar';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import Footer from './components/footer/Footer';
 
 function App() {
 
@@ -163,6 +164,7 @@ function App() {
       <div className="scroll-to-top-btn">
         <KeyboardArrowUpIcon onClick={scrollToTop} className='scroll-to-top-icon'/>
       </div>
+      <Footer />
     </div>
   );
 }
