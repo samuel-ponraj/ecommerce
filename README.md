@@ -5,7 +5,7 @@
 This project is an E-commerce list page built using React. It fetches product data from Fake Store API and allows users to interact with the products in various ways.
 
 ## Features Implemented
-- **Data Source**: Utilized Fake Store API(https://fakestoreapi.com/) for product information.
+- **Data Source**: Utilized Fake Store API (https://fakestoreapi.com/products) for product information.
 - **Sorting and Filtering**: 
   - Sort by ratings.
   - Sort price (low to high or high to low).
