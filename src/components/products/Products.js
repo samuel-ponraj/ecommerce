@@ -3,6 +3,7 @@ import './Products.css'
 import Rating from '@mui/material/Rating';
 import Skeleton from '@mui/material/Skeleton'; 
 import { toast, Toaster } from 'sonner';
+import { LazyLoadImage } from 'react-lazy-load-image-component'; 
 
 const Products = ({products, loading, error, setCartCount, clicked, setClicked}) => {
     
@@ -36,7 +37,13 @@ const Products = ({products, loading, error, setCartCount, clicked, setClicked})
     <div className="product-list">
     {products.map((product) => (
             <div key={product.id} className="product" >
-            <img src={product.image} alt={product.title} />
+              <LazyLoadImage
+                                src={product.image}
+                                alt={product.title}
+                                effect="blur"
+                                threshold={100}
+                                width='100%'
+                            />
             <p>{product.category.toUpperCase()}</p>
                 <div className="rating">
                     <Rating name="read-only" value={product.rating.rate} readOnly size="small"/>
